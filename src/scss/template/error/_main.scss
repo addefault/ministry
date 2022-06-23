@@ -1,0 +1,43 @@
+.error-main {
+    margin-top: size(30);
+    @include media(xl) {
+        margin-top: size(46,113);
+    }
+    &__container {
+        position: relative;
+        &::before, &::after {
+            content: "";
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            background-image: url(../images/404/bg.png);
+            background-size: auto 100%;
+            @include media(xl) {
+                display: block;
+            }
+        }
+        &::before {
+            left: -40px;
+            transform: translateX(-100%);
+        }
+        &::after {
+            left: 40px;
+            transform: translateX(560px);
+        }
+    }
+    img {
+        width: size(200);
+        height: auto;
+        @include media(md) {
+            width: size(300);
+        }
+        @include media(lg) {
+            width: size(400);
+        }
+        @include media(xl) {
+            width: 560px;
+        }
+    }
+}

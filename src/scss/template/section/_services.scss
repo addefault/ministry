@@ -1,0 +1,123 @@
+.services {
+    &__container {
+        padding-top: size(60);
+        padding-bottom: size(56);
+    }
+    &__items {
+        margin-bottom: size(32);
+        @include media(md) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include media(lg) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+    }
+    &__item {
+        padding: size(13) size(18) size(20);
+        position: relative;
+        height: size(380);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: size(20);
+        @include media(md) {
+            width: calc(50% - .1rem);
+            margin: size(10);
+            &:nth-child(odd) {
+                margin-left: 0;
+            }
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+        @include media(lg) {
+            margin: 0;
+            width: auto;
+        }
+        @include media(xl) {
+            height: size(540,113);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &-title {
+            line-height: 1.3;
+            font-size: size(24);
+            letter-spacing: -.3px;
+            font-weight: 800;
+            color: $color-white;
+            position: relative;
+            z-index: 1;
+        }
+        &-button {
+            width: size(200);
+            position: relative;
+            z-index: 2;
+        }
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+    &__link {
+        font-size: size(24);
+        line-height: 1.3;
+        letter-spacing: -.3px;
+        font-weight: 800;
+        color: $color-blue;
+        @include media(lg) {
+            br {
+                display: none;
+            }
+        }
+        @include media(xl) {
+            line-height: 1.1;
+            font-size: size(48,113);
+            img {
+                width: size(18,113);
+                margin-left: size(16,113);
+            }
+        }
+        img {
+            display: inline-block;
+            margin-left: size(10);
+        }
+        span, i {
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: .8px;
+                position: absolute;
+                bottom: 4.8px;
+                left: 0;
+                right: 0;
+            }
+        }
+        span::after {
+            background: $color-blue;
+        }
+        i {
+            color: $color-red;
+            font-style: normal;
+            &::after {
+                background: $color-red;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.calculate {
+    @include media(xl) {
+        position: relative;
+        &__picture {
+            img {
+                display: none;
+            }
+            img.calculate__picture-item\@xl {
+                display: block;
+            }
+        }
+        &__wrapper {
+            width: 46%;
+        }
+        i, ul {
+            display: block;
+            width: 80%;
+        }
+    }
+    &__info {
+        background: $color-grey;
+    }
+    &__container {
+        padding-top: size(52);
+        padding-bottom: size(100);
+        @include media(lg) {
+            .btn {
+                width: 320px;
+            }
+        }
+        @include media(xl) {
+            padding-top: size(90,113);
+            padding-top: size(100,113);
+        }
+    }
+    p {
+        margin-top: size(4);
+        margin-bottom: size(25);
+        @include media(xl) {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+    }
+    i {
+        font-family: $font-secondary;
+        color: $color-blue;
+        letter-spacing: -.2px;
+        font-size: size(18);
+        font-weight: 500;
+    }
+    ul {
+        margin-top: size(5);
+        margin-bottom: size(34);
+        @include media(xl) {
+            margin-top: 25px;
+        }
+    }
+    li {
+        padding-left: size(24);
+        background-image: url(../images/global/list.svg);
+        background-repeat: no-repeat;
+        background-position: left 7px;
+        margin-bottom: size(10);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__picture {
+        background-color: $color-blue;
+        background-image: url(../images/calculate/bg.png);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        img.calculate__picture-item\@xl {
+            display: none;
+        }
+        @include media(xl) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 38%;
+        }
+        &-container {
+            text-align: center;
+        }
+        &-wrapper {
+            border: 5px solid $color-black;
+            border-radius: 30px;
+            overflow: hidden;
+            display: inline-block;
+            transform: translateY(size(-60));
+            @include media(xl) {
+                border: none;
+                border-radius: 0;
+                transform: translate(-20%,-50%);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-35%, -50%);
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@include font('VelaSans','VelaSans-Light', 300);
+@include font('VelaSans','VelaSans-Regular', 400);
+@include font('VelaSans','VelaSans-Medium', 500);
+@include font('VelaSans','VelaSans-SemiBold', 600);
+@include font('VelaSans','VelaSans-Bold', 700);
+@include font('VelaSans','VelaSans-ExtraBold', 800);
+
+@include font('STIXTwoText','STIXTwoText-Regular', 400);
+@include font('STIXTwoText','STIXTwoText-Italic', 400, null, 'italic');
+@include font('STIXTwoText','STIXTwoText-Medium', 500);
+@include font('STIXTwoText','STIXTwoText-MediumItalic', 500, null, 'italic');
+
+@include font('Inter','Inter-Regular', 400);
+@include font('Inter','Inter-SemiBold', 600);

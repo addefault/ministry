@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+}
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+}
+html.opened, html.opened body {
+    height: 100%;
+    overflow-y: hidden;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    transition-duration: $td;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent; 
+}
+//table {
+//    border-collapse:collapse;
+//    border-spacing:0
+//}
+ul {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5, 
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+iframe {
+    border: 0;
+}
+b, strong {
+    font-weight: 800;
+}

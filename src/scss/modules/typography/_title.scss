@@ -1,0 +1,18 @@
+.title {
+    line-height: 1.3;
+    color: $color-black;
+    font-size: size(24);
+    letter-spacing: -.8px;
+    font-weight: 800;
+    font-style: normal;
+    @include media(xl) {
+        font-size: size(42);
+        line-height: 1.1;
+    }
+    b {
+        color: $color-blue;
+    }
+    &--blue {
+        color: $color-blue;
+    }
+}

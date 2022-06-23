@@ -1,0 +1,297 @@
+.price-quiz {
+    background: $color-grey;
+    &__types {
+        background: $color-lblue;
+        border-radius: 6px;
+        line-height: 1.4;
+        font-weight: 800;
+        color: $color-white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        transform: translateY(-50%);
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            display: block;
+            width: 90%;
+            height: 1px;
+            background: $color-white;
+            opacity: .3;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            margin-top: -1px;
+            left: 5%;
+        }
+        li {
+            padding-top: size(14);
+            padding-bottom: size(16);
+            padding-left: size(10);
+            padding-right: size(10);
+            flex: auto;
+            text-align: center;
+            position: relative;
+            &.active {
+                background: $color-blue;
+                box-shadow: 0px 10px 20px rgba(30, 72, 181, 0.5);
+                border-radius: 6px 6px 0px 0px;
+                margin-top: -10px;
+                padding-top: size(18);
+                padding-bottom: size(22);
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+    &__wrapper {
+        background: $color-white;
+        transform: translateY(-80px);
+        position: relative;
+        z-index: 0;
+        border-radius: 0px 0px 20px 20px;
+        padding: size(65) size(20) size(40);
+        input[type=radio], input[type=checkbox] {
+            display: none;
+        }
+        h3 {
+            font-size: size(18);
+            line-height: 1.4;
+            font-weight: 800;
+        }
+    }
+    &__questions {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__question {
+        &.active {
+            display: block;
+        }
+        &.disabled {
+            display: none;
+        }
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    &__image {
+        width: size(120);
+        margin-top: size(35);
+        input:checked + label {
+            .price-quiz__image {
+                &-wrapper {
+                    border: 1px solid $color-blue;
+                    .price-quiz__tooltip {
+                        bottom: 9px;
+                        right: 9px;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: $color-blue;
+                        opacity: .4;
+                        border-radius: 6px;
+                    }
+                }
+                &-title {
+                    &::before {
+                        background: $color-blue;
+                        border-color: $color-blue;
+                        box-shadow: 0px 2px 7px rgba(30, 72, 181, 0.5);
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: $color-white;
+                        top: 6px;
+                        left: 4px;
+                    }
+                }
+            }
+        }
+        &-title {
+            font-size: size(14);
+            margin-top: size(10);
+            padding-left: size(22);
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 1px solid rgba(10, 17, 40, 0.1);
+            }
+        }
+        &-wrapper {
+            width: 100%;
+            height: size(120);
+            border-radius: 6px;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+    }
+    &__tooltip {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 5;
+        .tooltip-trigger {
+            width: size(18);
+            height: size(18);
+            background-color: $color-blue;
+            border-radius: 50%;
+            background-image: url(../images/global/info.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto size(9);
+        }
+    }
+    &__radio {
+        width: 100%;
+        margin-top: size(20);
+        b, a {
+            font-weight: 600;
+            color: $color-blue;
+        }
+        a {
+            display: block;
+            text-decoration: underline;
+            transition: 0s;
+        }
+        &:first-child {
+            margin-top: size(34);
+        }
+        input:checked + label {
+            background: $color-blue;
+            box-shadow: 0px 8px 20px rgba(30, 72, 181, 0.5);
+            color: $color-white;
+            b, a {
+                color: $color-white;
+            }
+            &::before {
+                border-color: $color-blue;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 2px;
+                background: $color-blue;
+                position: absolute;
+                top: size(14);
+                left: size(14);
+            }
+        }
+        label {
+            position: relative;
+            padding: size(7) size(55) size(8) size(32);
+            min-height: size(58);
+            background: $color-grey;
+            border-radius: 6px;
+            display: block;
+            font-size: size(14);
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: $color-white;
+                border: 1px solid rgba(10, 17, 40, 0.1);
+                border-radius: 3px;
+                top: size(10);
+                left: size(10);
+            }
+        }
+        .price-quiz__tooltip {
+            bottom: auto;
+            top: 10px;
+        }
+        .tooltip-trigger {
+            background-color: $color-white;
+            background-image: url(../images/global/info--blue.svg);
+        }
+    }
+    &__buttons {
+        width: 100%;
+        margin-top: size(62);
+        display: flex;
+        justify-content: space-between;
+        .btn {
+            margin: 0 size(10);
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__result {
+        > p {
+            font-size: size(14);
+            margin-bottom: size(35);
+            &.price-quiz__heading {
+                font-weight: 800;
+                line-height: 1.4;
+                font-size: size(18);
+            }
+        }
+    }
+}
+#quizResult {
+    font-weight: 800;
+    color: $color-blue;
+    font-size: size(48);
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    margin: size(25) 0;
+    i {
+        font-style: normal;
+    }
+}
+#quizSend {
+    p {
+        font-size: size(18);
+        font-weight: 800;
+        line-height: 1.4;
+        margin: size(34) 0;
+        span {
+            display: block;
+            color: $color-blue;
+        }
+    }
+}
+#quizPdf {
+    p {
+        font-size: size(14);
+        margin: size(34) 0 size(15);
+    }
+}

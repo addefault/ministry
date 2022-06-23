@@ -1,0 +1,69 @@
+ul.breadcrumbs + .contacts .contacts__container {
+    padding-top: size(30);
+}
+.contacts {
+    &__container {
+        padding-top: size(52);
+        padding-bottom: size(35);
+    }
+    &__subaddress {
+        color: #b5b8bf;
+        font-weight: 800;
+        font-size: size(14);
+        padding-bottom: 6px;
+        border-bottom: 1px dashed currentColor;
+        display: inline-block;
+        margin: size(8) 0 size(6);
+    }
+    &__info {
+        margin: size(6) 0;
+        font-weight: 600;
+        letter-spacing: -.4px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        p {
+            margin-right: size(8);
+            @include media(md) {
+                margin-right: size(18);
+            }
+        }
+    }
+    &__icons {
+        margin: size(15) 0;
+        @include media(md) {
+            margin: 0;
+        }
+    }
+    .btn--circle {
+        display: inline-flex;
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__items {
+        @include media(lg) {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 54px;
+        }
+    }
+    &__item {
+        span {
+            font-weight: 600;
+            color: $color-blue;
+        }
+        p {
+            margin: size(9) 0;
+            font-size: size(14);
+        }
+        &:first-of-type {
+            margin-top: size(24);
+            @include media(lg) {
+                margin-top: 0;
+            }
+        }
+    }
+}

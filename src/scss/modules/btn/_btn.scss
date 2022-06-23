@@ -1,0 +1,21 @@
+.btn {
+    position: relative;
+    text-decoration: none;
+    transition-duration: $td;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    text-align: center;
+    font-size: size(16);
+    font-weight: 600;
+    width: 100%;
+    height: size(54);
+    line-height: size(51);
+    &[disabled], &[disabled]:hover, &[disabled]:active {
+        background: $color-grey;
+        border-color: $color-grey;
+        color: $color-blue;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+}

@@ -1,0 +1,151 @@
+.form {
+    &__container {
+        border-left: 20px solid $color-blue;
+        background: $color-white;
+        padding: size(50) size(20) size(30);
+        @include media(sm) {
+            border-width: 40px;
+        }
+        @include media(xs) {
+            border-width: 60px;
+            padding: 70px 100px 80px 40px;
+        }
+    }
+    input, textarea {
+        width: 100%;
+        background: $color-grey;
+        margin-bottom: 20px;
+        color: $color-black;
+        height: size(54);
+        line-height: size(54);
+        padding: 0 size(30);
+        border-radius: 60px;
+        font-size: 16px;
+    }
+    textarea {
+        height: size(150);
+        border-radius: 20px;
+        resize: none;
+        line-height: 1.3;
+        padding: 20px 30px;
+    }
+    &__checkbox {
+        font-size: 12px;
+        margin-top: 20px;
+        a {
+            text-decoration: underline;
+        }
+        [type=checkbox] {
+            display: none;
+            &:checked + label::before {
+                border-color: $color-blue;
+            }
+            &:checked + label::after {
+                opacity: 1;
+                background: $color-blue;
+            }
+            &._required + label {
+                color: $color-red;
+            }
+        }
+        label {
+            position: relative;
+            padding-left: 26px;
+            display: block;
+            &::before, &::after {
+                content: "";
+                display: block;
+                position: absolute;
+            }
+            &::before {
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border: 1px solid rgba(10, 17, 40, 0.1);
+                border-radius: 3px;
+            }
+            &::after {
+                width: 8px;
+                height: 8px;
+                top: 4px;
+                left: 4px;
+                background: $color-black;
+                opacity: 0;
+                border-radius: 2px;
+            }
+            &:hover::before {
+                border-color: $color-blue;
+            }
+            &:hover::after {
+                opacity: .1;
+            }
+        }
+        &--red {
+            label {
+                &:hover::before {
+                    border-color: $color-red;
+                }
+            }
+            [type=checkbox] {
+                &:checked + label::before {
+                    border-color: $color-red;
+                }
+                &:checked + label::after {
+                    background: $color-red;
+                }
+                &._required + label {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+    h3 {
+        color: $color-blue;
+        font-size: size(25);
+        font-weight: 800;
+        margin-bottom: size(20);
+        @include media(sm) {
+            font-size: size(30);
+        }
+        @include media(xs) {
+            font-size: 48px;
+            letter-spacing: -3px;
+            margin-bottom: 32px;
+            line-height: 1.1;
+        }
+    }
+    &__message {
+        text-align: center;
+        margin-top: size(15);
+        margin-bottom: size(30);
+        font-size: 16px;
+        display: none;
+    }
+    &__success {
+        color: $color-dblue;
+        display: none;
+    }
+    &__error {
+        color: $color-red;
+        display: none;
+    }
+    &__loading {
+        position: relative;
+        span {
+            height: size(25);
+            width: size(25);
+            border-radius: 50%;
+            border: 2px solid currentColor;
+            display: block;
+            margin: 0 auto;
+            border-bottom: 0;
+            border-right: 0;
+            animation: loading .5s infinite linear;
+        }
+    }
+    &__field._required {
+        border-color: $color-red;
+        color: $color-red;
+    }
+}

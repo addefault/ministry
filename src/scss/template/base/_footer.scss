@@ -1,0 +1,244 @@
+.footer {
+    border-top: 1px solid #dedce0;
+    background: $color-grey;
+    &__list {
+        margin: size(10) 0;
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            font-weight: 600;
+            font-size: size(12);
+        }
+        span {
+            font-weight: 400;
+            font-size: size(10);
+            line-height: 1.8;
+            display: block;
+            @include media(lg) {
+                font-size: size(11);
+            }
+        }
+        @include media(md) {
+            &-items {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            &-item {
+                margin: size(8) 0;
+                width: 48%;
+            }
+        }
+        @include media(lg) {
+            &-item {
+                width: 33%;
+            }
+        }
+    }
+    &__lists {
+        padding: size(5) 0;
+        border-bottom: 1px solid #dedce0;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        padding-top: size(19);
+        padding-bottom: size(14);
+        @include media(md) {
+            align-items: center;
+        }
+        @include media(lg) {
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            padding-top: size(40,113);
+            > * {
+                width: auto;
+                flex-shrink: 1;
+                margin: 0;
+            }
+        }
+        > * {
+            flex-shrink: 0;
+        }
+    }
+    &__logo-wrapper {
+        width: 47%;
+        p {
+            display: var(--dp-block);
+            font-size: 12px;
+            line-height: 2;
+            a {
+                text-decoration: underline;
+            }
+        }
+        @include media(lg) {
+            width: 25%;
+            flex-shrink: 0;
+        }
+    }
+    &__logo {
+        display: block;
+        @include media(lg) {
+            margin-bottom: 30px;
+        }
+    }
+    &__contacts {
+        width: 45%;
+        text-align: right;
+        font-size: size(14);
+        line-height: 1.7;
+        font-weight: 600;
+        @include media(lg) {
+            text-align: left;
+            order: 1;
+        }
+        > a {
+            display: block;
+        }
+    }
+    &__buttons {
+        margin-bottom: size(13);
+        .btn {
+            margin-right: 20px;
+            display: inline-flex;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__link {
+        color: $color-blue;
+        text-decoration: underline;
+        @include media(hg) {
+            margin-top: 30px;
+        }
+    }
+    &__menu {
+        margin: size(32) 0;
+        width: 50%;
+        font-size: size(14);
+        line-height: 1.7;
+        font-weight: 600;
+        @include media(md) {
+            width: 26%;
+        }
+        @include media(lg) {
+            width: 28%;
+            flex-shrink: 0;
+            padding-right: 18%;
+        }
+        @include media(xl) {
+            width: 24%;
+            padding-right: 15%;
+        }
+        li {
+            &.has-submenu {
+                position: relative;
+                > a {
+                    background: $color-grey;
+                    position: relative;
+                    z-index: 2;
+                    padding-right: size(10);
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: #000;
+                }
+                ul {
+                    font-weight: 400;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    width: 100%;
+                    padding-left: size(9);
+                    @include media(lg) {
+                        width: 158px;
+                        padding-left: 0;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+    &__reviews {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(md) {
+            width: 45%;
+        }
+        @include media(lg) {
+            flex-direction: column;
+        }
+    }
+    &__review {
+        @include media(lg) {
+            margin-top: 15px;
+            &:first-child {
+                margin-top: 0;
+            }
+            img {
+                height: 18px;
+                margin-bottom: 6px;
+            }
+        }
+        p {
+            font-size: size(10);
+            padding-left: size(14);
+            background-image: url(../images/reviews/star.svg);
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 10px auto;
+            @include media(hg) {
+                background-size: 12px auto;
+            }
+            span {
+                display: inline-block;
+                font-size: size(12);
+                font-weight: 800;
+                margin-right: 2px;
+                @include media(hg) {
+                    margin-right: 8px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__produced {
+        margin: size(33) 0;
+        text-transform: uppercase;
+        line-height: 1.4;
+        font-size: size(10);
+        font-weight: 600;
+        width: 100%;
+        @include media(md) {
+            width: 31%;
+        }
+        p {
+            margin-bottom: size(5);
+        }
+    }
+    &__copyright {
+        font-size: size(10);
+        line-height: 2;
+        width: 100%;
+        display: var(--dp-block);
+        @include media(md) {
+            width: auto;
+            text-align: right;
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+}

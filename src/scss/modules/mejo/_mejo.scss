@@ -1,0 +1,38 @@
+.show\@md, .f-show\@md,
+.show\@xl, .f-show\@xl,
+.show\@hg, .f-show\@hg {
+    display: none;
+}
+@include media(md) {
+    .hide\@md {
+        display: none;
+    }
+    .show\@md {
+        display: block;
+    }
+    .f-show\@md {
+        display: flex;
+    }
+}
+@include media(xl) {
+    .hide\@xl {
+        display: none;
+    }
+    .show\@xl {
+        display: block;
+    }
+    .f-show\@xl {
+        display: flex;
+    }
+}
+@include media(hg) {
+    .hide\@hg {
+        display: none;
+    }
+    .show\@hg {
+        display: block;
+    }
+    .f-show\@hg {
+        display: flex;
+    }
+}

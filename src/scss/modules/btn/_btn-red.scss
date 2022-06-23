@@ -1,0 +1,12 @@
+.btn--red {
+    background: $color-red;
+    @media (pointer: fine) {
+        &:hover {
+            background: $color-red;
+            box-shadow: 0px 10px 30px rgba(249, 61, 84, 0.5);
+        }
+    }
+    &:active {
+        background: #d62a3f;
+    }
+}

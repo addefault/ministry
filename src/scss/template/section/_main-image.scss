@@ -1,0 +1,24 @@
+section.main-image {
+    @include media(lg) {
+        position: relative;
+        height: size(380);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .breadcrumbs li {
+            color: $color-white;
+        }
+    }
+    @include media(xl) {
+        height: size(500,113);
+    }
+    @include media(hg) {
+        height: size(655,113);
+    }
+}

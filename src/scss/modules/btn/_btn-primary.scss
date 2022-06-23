@@ -1,0 +1,24 @@
+.btn--primary {
+    background: $color-blue;
+    color: $color-white;
+    border: none;
+    border-radius: 60px;
+    .icon {
+        color: $color-white;
+    }
+    @media (pointer: fine) {
+        &:hover {
+            background: $color-lblue;
+            box-shadow: 0px 10px 30px rgba(25, 118, 210, 0.5);
+        }
+        &.btn--small:hover {
+            box-shadow: 0px 8px 25px rgba(25, 118, 210, 0.5);
+        }
+        &.btn--xsmall:hover {
+            box-shadow: 0px 10px 30px rgba(25, 118, 210, 0.5); 
+        }
+    }
+    &:active {
+        background: $color-dblue;
+    }
+}

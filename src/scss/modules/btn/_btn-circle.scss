@@ -1,0 +1,12 @@
+//*
+.btn--circle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    padding-left: 9px;
+    padding-right: 9px;
+    &.btn--xsmall {
+        width: 36px;
+        height: 36px;
+    }
+}

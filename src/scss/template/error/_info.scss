@@ -1,0 +1,66 @@
+.error-info {
+    margin-bottom: size(30);
+    @include media(lg) {
+        margin-bottom: size(50);
+    }
+    @include media(xl) {
+        margin-bottom: size(200,113);
+    }
+    h1 {
+        color: $color-blue;
+        margin: size(15) 0;
+        font-weight: 800;
+        @include media(lg) {
+            font-size: size(35);
+            letter-spacing: -2px;
+        }
+        @include media(xl) {
+            font-size: size(48,113);
+            letter-spacing: -2.5px;
+            line-height: 1.1;
+            margin-bottom: size(20,113);
+            margin-top: 0;
+        }
+    }
+    p {
+        @include media(xl) {
+            letter-spacing: -1px;
+        }
+    }
+    &__wrapper {
+        @include media(lg) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: size(20) 0 size(30);
+            > div {
+                width: 48%;
+                &:last-child {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    > span {
+                        width: 48%;
+                        margin: 0;
+                        @include media(xl) {
+                            width: 47%;
+                        }
+                    }
+                }
+            }
+        }
+        @include media(xl) {
+            margin-top: size(45,113);
+            margin-bottom: size(50,113);
+        }
+    }
+    span {
+        display: block;
+        margin: size(15) 0;
+    }
+    @include media(md) {
+        .btn {
+            width: 260px;
+        }
+    }
+}

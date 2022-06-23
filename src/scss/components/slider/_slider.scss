@@ -1,0 +1,108 @@
+.swiper-wrap {
+    @include media(hg) {
+        position: relative;
+    }
+}
+.swiper-container {
+    overflow: visible;
+    .swiper-wrapper {
+        padding: 2px 0;
+    }
+    @include media(xs) {
+        overflow: hidden;
+    }
+    @include media(hg) {
+        position: static;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    .swiper-pagination-bullets:not(.swiper-pagination-bullets-dynamic) {
+        border-radius: 10px;
+        height: size(4);
+        background: #dedce0;
+        margin-top: size(40);
+        @include media(xl) {
+            width: auto;
+            height: auto;
+            background: transparent;
+            border-radius: 0;
+            margin-top: size(42, 115);
+        }
+    }
+    .swiper-pagination-bullet {
+        flex: initial;
+        width: 100%;
+        height: 100%;
+        background: #dedce0;
+        transition: none;
+        @include media(xl) {
+            border: 1px solid #000;
+            background: transparent;
+            width: size(14, 115);
+            height: size(14, 115);
+            border-radius: 50%;
+            margin: 0 size(10, 115);
+        }
+    }
+    .swiper-pagination-bullet-active {
+        background: $color-blue;
+        height: 100%;
+        border-radius: 10px;
+        @include media(xl) {
+            background: $color-blue;
+            width: size(20, 115);
+            height: size(20, 115);
+        }
+    }
+    .swiper-pagination-bullet-active:last-child {
+        border-right: 0;
+        @include media(xl) {
+            border: 1px solid #000;
+        }
+    }
+    .swiper-pagination-bullet-active:first-child {
+        border-left: 0;
+        @include media(xl) {
+            border: 1px solid #000;
+        }
+    }
+    .swiper-pagination-bullet:not(:last-child) {
+        margin-right: 0;
+        @include media(xl) {
+            margin-right: size(10, 115);
+        }
+    }
+    .swiper-navigation {
+        display: none;
+        @include media(hg) {
+            display: block;
+            width: size(62,113);
+            height: size(62,113);
+            background: transparent;
+            border: 2px solid $color-blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: auto 18px;
+            background-position: center;
+            &.swiper-prev {
+                left: -82px;
+                background-image: url(../images/slider/prev.svg);
+            }
+            &.swiper-next {
+                right: -82px;
+                background-image: url(../images/slider/next.svg);
+            }
+            &.swiper-button-disabled {
+                opacity: .3;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.price-info {
+    &__container {
+        padding-top: size(15);
+        padding-bottom: size(130);
+    }
+    &__paragraphs {
+        margin-top: size(28);
+        margin-bottom: size(34);
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: size(14);
+        &:not(:last-child) {
+            margin-bottom: size(20);
+        }
+        &-icon {
+            flex-shrink: 0;
+            margin-right: size(20);
+            width: size(100);
+            height: size(100);
+            border-radius: 10px;
+            background: $color-grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                height: size(64);
+                max-width: size(64);
+            }
+        }
+    }
+}

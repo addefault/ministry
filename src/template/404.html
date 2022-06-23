@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Министерство недвижимости</title>
+    <meta name="description" content="">
+    @@include("base/favicon.html",{})
+    <meta property="og:title" content="" />
+    <meta property="og:description"  content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+    @@include("menu/menu-modal.html",{})
+    @@include("base/header.html",{})
+    @@include("custom/breadcrumbs.html",{"page":"Страница не найдена"})
+    @@include("error/main.html",{})
+    @@include("error/info.html",{})
+    @@include("base/footer.html",{})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/libraries/libraries.js"></script>
+    <script src="js/main/main.js"></script>
+</body>
+</html>

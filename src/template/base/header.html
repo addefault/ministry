@@ -1,0 +1,20 @@
+<header class="header">
+    <div class="header__container container">
+        <div class="header__wrapper">
+            <a href="#" class="header__logo"><img src="images/global/logo.svg" alt="logo image"/></a>
+            <ul class="header__menu m:hide m:show@lg">
+                <li><a href="#">Компания</a></li>
+                <li class="has-children"><a href="#">Услуги</a><ul><li><a href="#">Продажа</a></li><li><a href="#">Покупка</a></li><li><a href="#">Юридическое сопровождение</a></li></ul></li>
+                <li><a href="#">Стоимость</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <div class="header__right m:hide m:show@lg">
+                <a href="#" class="btn btn--primary btn--circle btn--icon btn--xsmall"><img src="images/global/whatsapp-icon.svg" alt="whatsapp icon"></a>
+                <a href="#" class="btn btn--primary btn--circle btn--icon btn--xsmall"><img src="images/global/telegram-icon.svg" alt="telegram icon"></a>
+                <a href="tel:74957870767" class="header__phone">+7 (495) 787-07-67</a>
+                <a href="#popupApplication" class="btn btn--primary btn--small popup-link">Оставить заявку</a>
+            </div>
+            @@include("../menu/menu-toggle.html",{})      
+        </div>
+    </div>
+</header>

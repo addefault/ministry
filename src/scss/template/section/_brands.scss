@@ -1,0 +1,41 @@
+.brands {
+    &__container {
+        padding-top: size(60);
+    }
+    &__item {
+        @include media(md) {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-sub {
+            width: 100%;
+            height: size(70);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid rgba(10, 17, 40, 0.15);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            @include media(md) {
+                width: calc(50% - 10px);
+                margin-bottom: 0;
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+            @include media(hg) {
+                &:first-child {
+                    margin-right: 40px;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                max-width: 80%;
+                max-height: 90%;
+            }
+        }
+    }
+}

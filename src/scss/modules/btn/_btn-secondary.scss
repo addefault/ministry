@@ -1,0 +1,30 @@
+.btn--secondary {
+    background: transparent;
+    color: $color-black;
+    border: 2px solid $color-blue;
+    border-radius: 60px;
+    .icon {
+        color: $color-black;
+    }
+    @media (pointer: fine) {
+        &:hover {
+            background: $color-blue;
+            color: $color-white;
+            box-shadow: 0px 10px 30px rgba(30, 72, 181, 0.5);
+            path {
+                fill: $color-white;
+            }
+        }
+        &.btn--small:hover {
+            box-shadow: 0px 8px 25px rgba(30, 72, 181, 0.5);
+        }
+        &.btn--xsmall:hover {
+            box-shadow: 0px 10px 30px rgba(30, 72, 181, 0.5); 
+        }
+    }
+    &:active {
+        background: $color-dblue;
+        border-color: $color-dblue;
+        color: $color-white;
+    }
+}

@@ -1,0 +1,161 @@
+.article {
+    padding-bottom: size(80);
+    @include media(xl) {
+        padding-bottom: size(100,113);
+    }
+    &--wide {
+        padding-bottom: size(100);
+        @include media(xl) {
+            padding-bottom: size(200,113);
+        }
+    }
+    img {
+        width: 100%;
+        max-height: 100%;
+    }
+    &__video, &__wrapper > img {
+        margin: size(30) 0;
+        @include media(xl) {
+            margin-top: size(50,113);
+            margin-bottom: size(30,113);
+        }
+    }
+    &__image {
+        max-height: 420px;
+        margin-top: size(20);
+        @include media(xl) {
+            margin-top: size(40,113);
+            margin-bottom: size(50,113);
+        }
+    }
+    &__video {
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: size(48);
+            height: size(34);
+            background-image: url(../images/global/youtube.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            @include media(lg) {
+                width: 64px;
+                height: 45px;
+                background-size: 100% auto;
+            }
+        }
+    }
+    &__wrapper {
+        @include media(lg) {
+            width: size(800,113);
+        }
+        @include media(xl) {
+            width: size(660,113);
+        }
+    }
+    h1 {
+        font-weight: 800;
+        font-size: size(25);
+        margin-top: size(20);
+        line-height: 1.1;
+        @include media(lg) {
+            font-size: size(48,113);
+            letter-spacing: -3px;
+            margin-top: size(30,113);
+            margin-bottom: size(45,113);
+        }
+    }
+    h3 {
+        font-weight: 800;
+        font-size: size(20);
+        margin: size(30) 0 size(20);
+        line-height: 1.4;
+        @include media(lg) {
+            margin: size(47,113) 0 size(25,113);
+            font-size: size(24,113);
+        }
+    }
+    h4 {
+        font-weight: 800;
+        font-size: size(16);
+        margin: size(5) 0;
+    }
+    p {
+        margin-top: size(20);
+        @include media(lg) {
+            margin-top: size(25,113);
+        }
+    }
+    span {
+        display: block;
+        font-size: size(14);
+        line-height: 1.5;
+        @include media(lg) {
+            font-size: size(16,113);
+        }
+    }
+    a:not(.btn) {
+        text-decoration: underline;
+        color: $color-blue;
+        font-weight: 600;
+    }
+    ul {
+        li {
+            &::before {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: $color-black;
+                top: size(12); 
+                @include media(lg) {
+                    top: 16px;
+                }
+            }
+        }
+    }
+    ol {
+        li {
+            counter-increment: item;
+            padding-left: size(20);
+            &::before {
+                top: 0;
+                content: counter(item) ".";
+                color: $color-blue;
+            }
+        }
+    }
+    li {
+        line-height: 1.8;
+        margin-bottom: size(8);
+        padding-left: size(14);
+        list-style: none;
+        position: relative;
+        @include media(lg) {
+            line-height: 2;
+            margin-bottom: size(10);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+    }
+    .btn {
+        margin-top: size(40);
+        width: 100%;
+        display: block;
+        @include media(lg) {
+            margin-top: size(55,113);
+            width: size(260,113);
+        }
+    }
+}

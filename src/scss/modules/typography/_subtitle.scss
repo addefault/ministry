@@ -1,0 +1,11 @@
+.subtitle {
+    font-family: $font-secondary;
+    line-height: 1.4;
+    letter-spacing: -.4px;
+    font-size: size(20);
+    @include media(xl) {
+        font-size: 30px;
+        line-height: 1.2;
+        max-width: size(490);
+    }
+}

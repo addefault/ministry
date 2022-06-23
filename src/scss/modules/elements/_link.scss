@@ -1,0 +1,11 @@
+.link {
+    color: currentColor;
+    @media (pointer: fine) {
+        &:hover {
+            color: #000;
+        }
+    }
+    &:active {
+        color: #000;
+    }
+}

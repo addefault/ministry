@@ -1,0 +1,694 @@
+<section class="price-quiz">
+    <div class="price-quiz__container container">
+        <ul class="price-quiz__types">
+            <li class="active">Продажа</li>
+            <li>Покупка</li>
+            <li>Юридическое сопровождение</li>
+        </ul>
+        <div class="price-quiz__wrapper">
+            <form id="quiz1" class="price-quiz__questions active">
+                <div class="price-quiz__question active" data-quiz-number="2">
+                    <h3>Что продаём?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__image">
+                            <input type="radio" id="sell_object_flat" name="object">
+                            <label for="sell_object_flat">
+                                <div class="price-quiz__image-wrapper">
+                                    <img src="images/quiz/object1.jpg" alt="question image"/>
+                                </div>
+                                <p class="price-quiz__image-title"><span class="name">Квартира</span></p>
+                            </label>
+                        </div>
+                        <div class="price-quiz__image">
+                            <input type="radio" id="sell_object_apartments" name="object">
+                            <label for="sell_object_apartments">
+                                <div class="price-quiz__image-wrapper">
+                                    <img src="images/quiz/object2.jpg" alt="question image"/>
+                                </div>
+                                <p class="price-quiz__image-title"><span class="name">Апартаменты</span></p>
+                            </label>
+                        </div>
+                        <div class="price-quiz__image">
+                            <input type="radio" id="sell_object_room" name="object">
+                            <label for="sell_object_room">
+                                <div class="price-quiz__image-wrapper">
+                                    <img src="images/quiz/object3.jpg" alt="question image"/>
+                                </div>
+                                <p class="price-quiz__image-title"><span class="name">Комната</span></p>
+                            </label>
+                        </div>
+                        <div class="price-quiz__image">
+                            <input type="radio" id="sell_object_house" name="object">
+                            <label for="sell_object_house">
+                                <div class="price-quiz__image-wrapper">
+                                    <img src="images/quiz/object4.jpg" alt="question image"/>
+                                </div>
+                                <p class="price-quiz__image-title"><span class="name">Дом</span></p>
+                            </label>
+                        </div>
+                        <div class="price-quiz__image">
+                            <input type="radio" id="sell_object_townhouse" name="object">
+                            <label for="sell_object_townhouse">
+                                <div class="price-quiz__image-wrapper">
+                                    <img src="images/quiz/object5.jpg" alt="question image"/>
+                                </div>
+                                <p class="price-quiz__image-title"><span class="name">Таунхаус</span></p>
+                            </label>
+                        </div>
+                        <div class="price-quiz__image">
+                            <input type="radio" id="sell_object_plot" name="object">
+                            <label for="sell_object_plot">
+                                <div class="price-quiz__image-wrapper">
+                                    <img src="images/quiz/object6.jpg" alt="question image"/>
+                                </div>
+                                <p class="price-quiz__image-title"><span class="name">Участок</span></p>
+                            </label>
+                        </div>
+                        <div class="price-quiz__buttons">
+                            <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="2" data-quiz-depends-options="1,2,4,5,6">
+                    <h3>Ценовой диапазон</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_price_fix" name="sell_price" data-quiz-system="1">
+                            <label for="sell_price_fix"><span class="name">До 7 000 000 (стоимость фиксированная)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_price_percent" name="sell_price" data-quiz-system="%">
+                            <label for="sell_price_percent"><span class="name">От 7 000 000 (стомость в %)</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-number="3" data-quiz-depends-question="2" data-quiz-depends-options="2">
+                    <h3>Собственность</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_property_secondary_aparts" name="sell_property">
+                            <label for="sell_property_secondary_aparts"><span class="name">Вторичное жилье (собственность оформлена)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_property_new_aparts" name="sell_property">
+                            <label for="sell_property_new_aparts"><span class="name">Новостройка (переуступка прав)</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-number="4" data-quiz-depends-question="2" data-quiz-depends-options="1">
+                    <h3>Собственность</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_property_secondary" name="sell_property" data-quiz-start="200000:3">
+                            <label for="sell_property_secondary"><span class="name">Вторичное жилье (собственность оформлена)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_property_new" name="sell_property" data-quiz-start="200000:3">
+                            <label for="sell_property_new"><span class="name">Новостройка (переуступка прав)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_property_council" name="sell_property" data-quiz-start="200000:3">
+                            <label for="sell_property_council"><span class="name">Муниципальная квартира (нужна приватизация)</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question">
+                    <h3>Где продаем?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_where_moscow" name="sell_where" data-quiz-value="-25000:-0.25">
+                            <label for="sell_where_moscow"><span class="name">Москва</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_where_newmoscow" name="sell_where" data-quiz-value="-15000:-0.15">
+                            <label for="sell_where_newmoscow"><span class="name">Новая Москва</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_where_mkad" name="sell_where">
+                            <label for="sell_where_mkad"><span class="name">Область до 10 км от МКАД</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="3" data-quiz-depends-options="2">
+                    <h3>Стадия строительства</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_state_half_apart" name="sell_state">
+                            <label for="sell_state_half_apart"><span class="name">Сдача дома в пределах 6 мес</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_state_one_apart" name="sell_state">
+                            <label for="sell_state_one_apart"><span class="name">Сдача дома в пределах 1 года</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_state_two_apart" name="sell_state">
+                            <label for="sell_state_two_apart"><span class="name">Сдача дома через 2 года и более</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="2">
+                    <h3>Стадия строительства</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_state_half" name="sell_state">
+                            <label for="sell_state_half"><span class="name">Сдача дома в пределах 6 мес</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_state_one" name="sell_state" data-quiz-value="10000:0.1">
+                            <label for="sell_state_one"><span class="name">Сдача дома в пределах 1 года</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_state_two" name="sell_state" data-quiz-value="20000:0.2">
+                            <label for="sell_state_two"><span class="name">Сдача дома через 2 года и более</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="3" data-quiz-depends-options="2">
+                    <h3>Состояние?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_trim_apart" name="sell_condition">
+                            <label for="sell_condition_trim_apart"><span class="name">Отделка от застройщика</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_whitebox_apart" name="sell_condition">
+                            <label for="sell_condition_whitebox_apart"><span class="name">White Box</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_wtrim_apart" name="sell_condition">
+                            <label for="sell_condition_wtrim_apart"><span class="name">Без отделки</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="3">
+                    <h3>Состояние?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_exclusive_mun" name="sell_condition" data-quiz-value="-25000:-0.25">
+                            <label for="sell_condition_exclusive_mun"><span class="name">Эксклюзивный дизайнерский ремонт</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_key_mun" name="sell_condition" data-quiz-value="-15000:-0.15">
+                            <label for="sell_condition_key_mun"><span class="name">Качественный ремонт "под ключ"</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_econom_mun" name="sell_condition">
+                            <label for="sell_condition_econom_mun"><span class="name">Ремонт эконом</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_redecor_mun" name="sell_condition" data-quiz-value="15000:0.15">
+                            <label for="sell_condition_redecor_mun"><span class="name">Нужен косметический ремонт</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_renew_mun" name="sell_condition" data-quiz-value="25000:0.25">
+                            <label for="sell_condition_renew_mun"><span class="name">Нужен капитальный ремонт</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_trim_mun" name="sell_condition">
+                            <label for="sell_condition_trim_mun"><span class="name">Отделка от застройщика</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-number="6" data-quiz-depends-question="4" data-quiz-depends-options="1">
+                    <h3>Состояние?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_exclusive" name="sell_condition" data-quiz-value="-25000:-0.25">
+                            <label for="sell_condition_exclusive"><span class="name">Эксклюзивный дизайнерский ремонт</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_key" name="sell_condition" data-quiz-value="-15000:-0.15">
+                            <label for="sell_condition_key"><span class="name">Качественный ремонт "под ключ"</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_econom" name="sell_condition">
+                            <label for="sell_condition_econom"><span class="name">Ремонт эконом</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_redecor" name="sell_condition" data-quiz-value="15000:0.15">
+                            <label for="sell_condition_redecor"><span class="name">Нужен косметический ремонт</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_renew" name="sell_condition" data-quiz-value="25000:0.25">
+                            <label for="sell_condition_renew"><span class="name">Нужен капитальный ремонт</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_trim" name="sell_condition">
+                            <label for="sell_condition_trim"><span class="name">Отделка от застройщика</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_whitebox" name="sell_condition" data-quiz-value="10000:0.1">
+                            <label for="sell_condition_whitebox"><span class="name">White Box</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_condition_wtrim" name="sell_condition" data-quiz-value="-10000:-0.1">
+                            <label for="sell_condition_wtrim"><span class="name">Без отделки</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="3" data-quiz-depends-options="2">
+                    <h3>Сроки продажи?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_urgently_apart" name="sell_terms">
+                            <label for="sell_terms_urgently_apart"><span class="name">до 1 месяца (срочно)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_promptly_apart" name="sell_terms">
+                            <label for="sell_terms_promptly_apart"><span class="name">до 2 месяцев (оперативно)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_normal_apart" name="sell_terms">
+                            <label for="sell_terms_normal_apart"><span class="name">до 3 месяцев (нормально)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_nhurry_apart" name="sell_terms">
+                            <label for="sell_terms_nhurry_apart"><span class="name">до 6 месяцев (никуда не тороплюсь)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_nmatter_apart" name="sell_terms">
+                            <label for="sell_terms_nmatter_apart"><span class="name">Когда продастся, тогда продастся.</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="1,2">
+                    <h3>Сроки продажи?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_urgently" name="sell_terms" data-quiz-value="-50000:-0.5">
+                            <label for="sell_terms_urgently"><span class="name">до 1 месяца (срочно)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_promptly" name="sell_terms" data-quiz-value="-25000:-0.25">
+                            <label for="sell_terms_promptly"><span class="name">до 2 месяцев (оперативно)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_normal" name="sell_terms">
+                            <label for="sell_terms_normal"><span class="name">до 3 месяцев (нормально)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_nhurry" name="sell_terms" data-quiz-value="25000:0.25">
+                            <label for="sell_terms_nhurry"><span class="name">до 6 месяцев (никуда не тороплюсь)</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_terms_nmatter" name="sell_terms" data-quiz-value="50000:0.5">
+                            <label for="sell_terms_nmatter"><span class="name">Когда продастся, тогда продастся.</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="1,3">
+                    <h3>Использование?</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_use_nobody" name="sell_use">
+                            <label for="sell_use_nobody"><span class="name">Никто не проживает. Свободна от личных вещей</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="radio" id="sell_use_always" name="sell_use" data-quiz-value="10000:0.1">
+                            <label for="sell_use_always"><span class="name">В квартире постояно проживают</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="3" data-quiz-depends-options="2">
+                    <h3>Юридические нюансы</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws1_apart" name="sell_laws">
+                            <label for="sell_laws1_apart"><span class="name">Полная стоимость в договоре уступки</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws2_apart" name="sell_laws">
+                            <label for="sell_laws2_apart"><span class="name">Недвижимость находиться в залоге</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws3_apart" name="sell_laws">
+                            <label for="sell_laws3_apart"><span class="name">Продажа будет совершена по доверенности</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws4_apart" name="sell_laws">
+                            <label for="sell_laws4_apart"><span class="name">Будет возможна регистрация по месту жительства</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws5_apart" name="sell_laws">
+                            <label for="sell_laws5_apart"><span class="name">Продавец юридическое лицо</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="2">
+                    <h3>Юридические нюансы</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws1" name="sell_laws" data-quiz-value="-10000:-0.1">
+                            <label for="sell_laws1"><span class="name">Полная стоимость в договоре уступки</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws2" name="sell_laws" data-quiz-value="-1000:-0.01">
+                            <label for="sell_laws2"><span class="name">Материнский капитал не использовался</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws3" name="sell_laws" data-quiz-value="25000:0.25">
+                            <label for="sell_laws3"><span class="name">Недвижимость находиться в залоге</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_laws4" name="sell_laws" data-quiz-value="25000:0.25">
+                            <label for="sell_laws4"><span class="name">Продажа будет совершена по доверенности</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="3">
+                    <h3>Юридические нюансы (плюсы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos1_mun" name="sell_lpos1">
+                            <label for="sell_lpos1"><span class="name">Полная стоимость в договоре купли-продажи</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos2_mun" name="sell_lpos2">
+                            <label for="sell_lpos2"><span class="name">Свободная продажа</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos3_mun" name="sell_lpos3">
+                            <label for="sell_lpos3"><span class="name">Не более 2х собственников</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="1">
+                    <h3>Юридические нюансы (плюсы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos1" name="sell_lpos1" data-quiz-value="-1000:-0.01">
+                            <label for="sell_lpos1"><span class="name">Более 10 лет в собственности</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos2" name="sell_lpos2" data-quiz-value="-1000:-0.01">
+                            <label for="sell_lpos2"><span class="name">Полная стоимость в договоре купли-продажи</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos3" name="sell_lpos3" data-quiz-value="-1000:-0.01">
+                            <label for="sell_lpos3"><span class="name">Свободная продажа</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos4" name="sell_lpos4" data-quiz-value="-1000:-0.01">
+                            <label for="sell_lpos4"><span class="name">Не более 2х собственников</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lpos5" name="sell_lpos5" data-quiz-value="-1000:-0.01">
+                            <label for="sell_lpos5"><span class="name">Материнский капитал не использовался</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="3">
+                    <h3>Юридические нюансы (минусы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg1_mun" name="sell_lneg1">
+                            <label for="sell_lneg1_mun"><span class="name">Есть несовершеннолетние собственники</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg2_mun" name="sell_lneg2">
+                            <label for="sell_lneg2_mun"><span class="name">Продажа будет совершена по доверенности</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg3_mun" name="sell_lneg3">
+                            <label for="sell_lneg3_mun"><span class="name">Есть собственники на учете в ПНД или НД</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="1">
+                    <h3>Юридические нюансы (минусы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg1" name="sell_lneg1" data-quiz-value="10000:0.1">
+                            <label for="sell_lneg1"><span class="name">Недвижимость находиться в залоге</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg2" name="sell_lneg2" data-quiz-value="10000:0.1">
+                            <label for="sell_lneg2"><span class="name">Есть несовершеннолетние собственники</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg3" name="sell_lneg3" data-quiz-value="10000:0.1">
+                            <label for="sell_lneg3"><span class="name">Недвижимость недавно получена по наследству</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg4" name="sell_lneg4" data-quiz-value="10000:0.1">
+                            <label for="sell_lneg4"><span class="name">Продажа будет совершена по доверенности</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg5" name="sell_lneg5" data-quiz-value="10000:0.1">
+                            <label for="sell_lneg5"><span class="name">Есть собственники на учете в ПНД или НД</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_lneg6" name="sell_lneg6" data-quiz-value="10000:0.1">
+                            <label for="sell_lneg6"><span class="name">Недавно были судебные споры</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="3" data-quiz-depends-options="2">
+                    <h3>Характеристики (плюсы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos1_apart" name="sell_cpos1">
+                            <label for="sell_cpos1_apart"><span class="name">Видовые апартаменты</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos2_apart" name="sell_cpos2">
+                            <label for="sell_cpos2_apart"><span class="name">До метро не более 1 км пешком</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="3" data-quiz-depends-options="2">
+                    <h3>Характеристики (минусы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg1_apart" name="sell_cneg1">
+                            <label for="sell_cneg1_apart"><span class="name">1-й этаж</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg2_apart" name="sell_cneg2">
+                            <label for="sell_cneg2_apart"><span class="name">нет балкона или лоджии</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg3_apart" name="sell_cneg3">
+                            <label for="sell_cneg3_apart"><span class="name">Окна выходят на шумную трассу</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--primary quizFinish">Узнать результаты</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="2">
+                    <h3>Характеристики</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_char1" name="sell_char">
+                            <label for="sell_char1"><span class="name">Видовая квартира</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_char2" name="sell_char">
+                            <label for="sell_char2"><span class="name">До метро не более 1 км пешком</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_char3" name="sell_char">
+                            <label for="sell_char3"><span class="name">Окна выходят на шумную трассу</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_char4" name="sell_char">
+                            <label for="sell_char4"><span class="name">Нижний жилой этаж</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--primary quizFinish">Узнать результаты</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="1,3">
+                    <h3>Характеристики (плюсы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos1" name="sell_cpos1" data-quiz-value="-10000:-0.1">
+                            <label for="sell_cpos1"><span class="name">Видовая квартира</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos3" name="sell_cpos3" data-quiz-value="-10000:-0.1">
+                            <label for="sell_cpos3"><span class="name">Дом не старше 10 лет</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos4" name="sell_cpos4" data-quiz-value="-10000:-0.1">
+                            <label for="sell_cpos4"><span class="name">Консьерж / Охрана</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos5" name="sell_cpos5" data-quiz-value="-10000:-0.1">
+                            <label for="sell_cpos5"><span class="name">До метро не более 1 км пешком</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cpos6" name="sell_cpos6" data-quiz-value="-10000:-0.1">
+                            <label for="sell_cpos6"><span class="name">Дом в программе реновации</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--secondary quizSlide quizPrev">Назад</button>
+                        <button type="button" class="btn btn--primary quizSlide quizNext">Далее</button>
+                    </div>
+                </div>
+                <div class="price-quiz__question" data-quiz-depends-question="4" data-quiz-depends-options="1,3">
+                    <h3>Характеристики (минусы)</h3>
+                    <div class="price-quiz__question-wrapper">
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg1" name="sell_cneg1" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg1"><span class="name">1-й этаж</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg2" name="sell_cneg2" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg2"><span class="name">2-й этаж с неудобствами</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg3" name="sell_cneg3" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg3"><span class="name">нет балкона или лоджии</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg4" name="sell_cneg4" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg4"><span class="name">существеная несогласованная перпланировка</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg5" name="sell_cneg5" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg5"><span class="name">Окна выходят на шумную трассу</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg6" name="sell_cneg6" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg6"><span class="name">деревянные (смешанные) перекрытия в доме</span></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg7" name="sell_cneg7" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg7"><span class="name">Маргинальные соседи</span><div class="price-quiz__tooltip"><div class="tooltip-trigger"><div class="tooltip"><div class="tooltip__wrapper"><span>Мы явлемяся членами Российской Гильдии Риэлторов</span><a href="https://rgr.ru">https://rgr.ru</a></div></div></div></div></label>
+                        </div>
+                        <div class="price-quiz__radio">
+                            <input type="checkbox" id="sell_cneg8" name="sell_cneg8" data-quiz-value="10000:0.1">
+                            <label for="sell_cneg8"><span class="name">Депрессивный вид из окон</span></label>
+                        </div>
+                    </div>
+                    <div class="price-quiz__buttons">
+                        <button type="button" class="btn btn--primary quizFinish">Узнать результаты</button>
+                    </div>
+                </div>
+                
+            </form>
+            <form id="quiz2" class="price-quiz__questions">
+                <h3>Что покупаем?</h3>
+            </form>
+            <form id="quiz3" class="price-quiz__questions">
+                <h3>Что продаём?</h3>
+            </form>
+            <div class="price-quiz__result">
+                <p class="price-quiz__heading">Стоимость услуг:</p>
+                <p id="quizResult" data-quiz-result="190000"><span>190 000</span><i>₽</i></p>
+                <p>Хотите получить дополнительную скидку?</p>
+                <div class="price-quiz__radio">
+                    <input type="radio" id="quiz_discount1" name="quiz_discount" data-quiz-discount="5">
+                    <label for="quiz_discount1">5% при одновременном заказе услуги на покупку недвижимости</label>
+                </div>
+                <div class="price-quiz__radio">
+                    <input type="radio" id="quiz_discount2" name="quiz_discount" data-quiz-discount="5">
+                    <label for="quiz_discount2">5% если в течение 30 минут воспользуетесь промокодом <b>XXXXX</b></label>
+                </div>
+                <div class="price-quiz__radio">
+                    <input type="radio" id="quiz_discount3" name="quiz_discount" data-quiz-discount="1">
+                    <label for="quiz_discount3">1% если поставите лайк на любой пост <a href="#">у нас в Instagram</a></label>
+                </div>
+                <form id="quizSend" class="form quiz-form" autocomplete="off" novalidate method="POST">
+                    <p><span>Отправить заявку</span> с результатами менеджеру (мы вам перезвоним):</p>
+                    <input type="text" name="name" class="form__field" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" class="form__field" placeholder="Ваш телефон" required>
+                    <div class="form__message">
+                        <div class="form__loading"><span></span></div>
+                        <p class="form__success">Спасибо, мы отправили вашу заявку. Менеджер свяжется с вами в ближайшее время</p>
+                        <p class="form__error">Что-то пошло не так. Заявка не отправлена.</p>
+                    </div>
+                    <button type="submit" class="form__send btn btn--primary btn--red">Отправить заявку</button>
+                    <div class="form__checkbox form__checkbox--red">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">Вы соглашаетесь с <a href="policy.html">условиями оферты</a></label>
+                    </div>
+                </form>
+                <form id="quizPdf" class="form quiz-form pdf-form" autocomplete="off" novalidate method="POST">
+                    <p>Вы можете сохранить результаты для последующей консультации:</p>
+                    <button type="submit" class="form__send btn btn--secondary btn--wicon">Скачать результаты<svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.7993 24H2.39989C1.7634 24 1.15298 23.7472 0.702913 23.2971C0.252845 22.847 0 22.2366 0 21.6001V2.40095C0 1.76446 0.252845 1.15404 0.702913 0.703969C1.15298 0.253901 1.7634 0.00105586 2.39989 0.00105586H10.7995C10.8103 -0.000351954 10.8212 -0.000351954 10.8319 0.00105586H10.8391C10.8505 0.00459772 10.8621 0.00700941 10.8739 0.0082556C10.9795 0.0154553 11.0839 0.0358542 11.1847 0.0694528H11.2351C11.2573 0.0849548 11.2781 0.102209 11.2975 0.12105C11.4282 0.179179 11.5473 0.260486 11.6491 0.36104L18.8488 7.56072C18.9493 7.66246 19.0307 7.78158 19.0888 7.91231C19.0992 7.93825 19.1084 7.96468 19.1164 7.9915L19.1284 8.0251C19.162 8.1247 19.1812 8.22909 19.1872 8.33469C19.1882 8.34664 19.191 8.35837 19.1956 8.36949V8.37669C19.1975 8.38456 19.1987 8.39259 19.1992 8.40069V21.6001C19.1992 22.2366 18.9463 22.847 18.4962 23.2971C18.0462 23.7472 17.4358 24 16.7993 24ZM12.5082 14.4004V20.4002H13.6362V17.9523H15.3881V16.9467H13.6362V15.4096H15.5993V14.4004H12.5082ZM8.06845 14.4004V20.4002H9.51558C9.81531 20.415 10.1145 20.3623 10.3912 20.246C10.6678 20.1297 10.9148 19.9527 11.1139 19.7282C11.5278 19.2001 11.7351 18.5393 11.6971 17.8695V16.8975C11.725 16.2347 11.5119 15.5842 11.0971 15.0664C10.7071 14.6224 10.1372 14.3776 9.54558 14.4004H8.06845ZM3.59984 14.4004V20.4002H4.72779V18.2895H5.47896C5.98054 18.317 6.47012 18.1311 6.8277 17.7783C7.16835 17.397 7.34511 16.897 7.31968 16.3863C7.34195 15.8634 7.1653 15.3515 6.8253 14.9536C6.6592 14.7694 6.45438 14.6243 6.22554 14.5286C5.9967 14.433 5.74953 14.3892 5.50176 14.4004H3.59984ZM10.7995 2.40095V8.40069H16.7993L10.7995 2.40095ZM9.53478 19.3946H9.19639V15.4096H9.60678C9.75019 15.4011 9.89344 15.4288 10.0234 15.49C10.1534 15.5512 10.2659 15.644 10.3507 15.76C10.5271 16.1235 10.6027 16.5279 10.5691 16.9311V17.9739C10.5955 18.3578 10.5127 18.7418 10.3291 19.079C10.2323 19.1921 10.1093 19.2799 9.97094 19.3349C9.83254 19.3899 9.68286 19.4104 9.53478 19.3946ZM5.50176 17.2803H4.72659V15.4096H5.51256C5.60908 15.4106 5.70376 15.4362 5.78771 15.4838C5.87167 15.5315 5.94214 15.5996 5.99254 15.682C6.12213 15.8968 6.18453 16.1439 6.17253 16.3947C6.18758 16.6281 6.12561 16.86 5.99614 17.0547C5.9373 17.1286 5.86186 17.1875 5.77595 17.2267C5.69005 17.2659 5.5961 17.2843 5.50176 17.2803Z" fill="#1E48B5"/></svg></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

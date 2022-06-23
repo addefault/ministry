@@ -1,0 +1,9 @@
+.btn--wicon {
+    svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: size(18);
+        height: size(18);
+    }
+}
